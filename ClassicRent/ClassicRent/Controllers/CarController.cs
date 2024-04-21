@@ -1,6 +1,4 @@
-using ClassicRent.Db;
-using ClassicRent.Db.Entity;
-using ClassicRent.Db.Repository;
+using ClassicRent.Service.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClassicRent.Controllers;
@@ -9,50 +7,16 @@ namespace ClassicRent.Controllers;
 [Route("[controller]")]
 public class CarController:ControllerBase
 {
-    private CarRepository carRepo;
+    private readonly ICarService _carService;
 
-    public CarController(CarRepository carRepo)
+    public CarController(ICarService carService)
     {
-        this.carRepo = carRepo;
+        _carService = carService;
     }
 
     [HttpGet("All")]
-    public async Task<ActionResult> AllAsync()
+    public ActionResult AllAsync()
     {
-        return Ok(await carRepo.GetAllAsync());
-    }
-
-    [HttpGet("GetById")]
-    public async Task<ActionResult> GetByIdAsync(int id)
-    {
-        return Ok(await carRepo.GetByIdAsync(id));
-    }
-
-    [HttpDelete("Delete")]
-    public async Task<ActionResult> DeleteAsync(int id)
-    {
-        await carRepo.DeleteByIdAsync(id);
-        return Ok();
-    }
-
-    [HttpPost("Add")]
-    public async Task<ActionResult> AddAsync(Car c)
-    {
-        await carRepo.AddCarAsync(c);
-        return Ok();
-    }
-
-    [HttpPut("ChangeDamage")]
-    public async Task<ActionResult> ChangeDamageAsync(int id, string damage)
-    {
-        await carRepo.ChangeDamageAsync(id, damage);
-        return Ok();
-    }
-
-    [HttpPut("ExtendReviewDate")]
-    public async Task<ActionResult> ExtendReviewDateAsync(int id)
-    {
-        await carRepo.ExtendReviewDate(id);
-        return Ok();
+        return Ok(_carService.GetAll());
     }
 }

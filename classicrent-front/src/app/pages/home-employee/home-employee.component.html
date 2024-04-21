@@ -1,0 +1,25 @@
+<div class="content">
+
+    <app-navbar-employee></app-navbar-employee>
+
+    <div class="reservation-data">
+        <div class="reservation-container">
+            <h1 class="text-center orange mb-3 mt-5">Reservations</h1>
+            <div class="car-item d-flex" *ngFor="let item of reservations">
+                <div class="d-flex">         
+                     <div class="ms-3">
+                         <b>{{getCarName(item.carId)}}</b>
+                         <div>From: {{item.from | date:'yyyy-MM-dd hh:mm'}}</div>
+                         <div>To: {{item.to | date:'yyyy-MM-dd hh:mm'}}</div>
+                         <div>Status: {{statusMap[item.status]}}</div>
+                         <div>Price: <b>{{item.price}} E</b></div>
+                         <div *ngIf="item.status === 0" class="mt-2">
+                            <button class="accept me-2" (click)="decision(item.id, 2)">Accept</button>
+                            <button class="refuse" (click)="decision(item.id, 3)">Refuse</button>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

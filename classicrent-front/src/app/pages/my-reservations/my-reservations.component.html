@@ -1,0 +1,21 @@
+<div class="content">
+
+    <app-navbar-user></app-navbar-user>
+
+    <div class="reservation-data">
+        <div class="reservation-container">
+            <h1 class="text-center orange mb-3 mt-5">Your reservations</h1>
+            <div class="car-item d-flex" *ngFor="let item of reservations">
+                <div class="d-flex">         
+                     <div class="ms-3">
+                         <b>{{getCarName(item.carId)}}</b>
+                         <div>From: {{item.from | date:'yyyy-MM-dd hh:mm'}}</div>
+                         <div>To: {{item.to | date:'yyyy-MM-dd hh:mm'}}</div>
+                         <div>Status: {{statusMap[item.status]}}</div>
+                         <div>Price: <b>{{item.price}} E</b></div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

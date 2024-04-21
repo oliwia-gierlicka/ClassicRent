@@ -1,0 +1,32 @@
+<div class="content d-flex">
+    <div class="card-window">
+
+        <div [formGroup]="form">
+            <h4 class="text-center">Make a reservation</h4>
+            <br>
+            <input formControlName="from" type="datetime-local" class="form-control" placeholder="From">
+            <br>
+            <input formControlName="to" type="datetime-local" class="form-control" placeholder="To">
+            <br>
+            <input formControlName="rentPlace" type="text" class="form-control" placeholder="Rent place">
+            <br>
+            <input formControlName="returnPlace" type="text" class="form-control" placeholder="Return place">
+            <br>
+            <select class="form-control" formControlName="pay">
+                <option [value]="0">Money</option>
+                <option [value]="1">Card</option>
+            </select>
+            <br>
+            <input formControlName="isFullAssurance" type="checkbox" id="vehicle1" name="vehicle1" value="0">
+            <label for="vehicle1"> Full assurance</label>
+
+            <div class="mt-3">
+                Price: <b>{{form.controls.price.value}}</b>
+            </div>
+
+            <div class="text-center mt-3">
+                <app-btn text="Make a reservation" (click)="makeReservation()"></app-btn>
+            </div>
+        </div>
+    </div>
+</div>

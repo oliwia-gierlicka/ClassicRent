@@ -1,0 +1,49 @@
+.content {
+    background: rgba(0, 0, 0, .40) url("../../../assets/contact.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.car-item {
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.reservation {
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+
+.reservation-container {
+    width: 50%;
+}
+
+.reservation-data {
+    display: flex;
+    justify-content: center;
+}
+
+.orange {
+    color: #FF4C4C;
+}
+
+.accept {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}
+
+.refuse {
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}

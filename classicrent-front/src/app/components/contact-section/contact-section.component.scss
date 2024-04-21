@@ -1,0 +1,19 @@
+.content {
+    background: rgba(0, 0, 0, .80) url("../../../assets/contact.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+    height: 100vh;
+    color: #EFE3B8;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white {
+    color: white;
+}
+
+.orange {
+    color: #FF4C4C;
+}

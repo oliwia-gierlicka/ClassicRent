@@ -1,0 +1,30 @@
+.text{
+    color: #FF4C4C;
+    font-size: 64px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 8rem;
+    margin-top:3.5rem;
+}
+
+.content{
+    padding: 3rem 5rem;
+}
+
+.descr{
+    color: #262626;
+    font-size: 15px;
+    font-family: 'Open Sauce One', sans-serif;
+    text-align: justify;
+}
+
+.descr-content {
+    width: 612px;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 3.5rem;
+}

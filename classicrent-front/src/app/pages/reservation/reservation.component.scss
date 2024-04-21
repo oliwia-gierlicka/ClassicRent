@@ -1,0 +1,41 @@
+.content {
+    background: rgba(0, 0, 0, .40) url("../../../assets/contact.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+    height: 100vh;
+    color: #EFE3B8;
+    padding: 1rem;
+}
+
+.card-window {
+    background-color: white;
+    color: black;
+    margin: auto;
+    width: 500px;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.card-tab {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.card-tab-active {
+    background-color: rgb(184, 158, 111);
+}
+
+.card-tab-content {
+    background-color: rgb(184, 158, 111);
+    padding: 1rem;
+}
+
+.button {
+    margin-top: 1rem;
+    background-color: #695125;
+    color: #FFFCF0;
+    border: none;
+    padding: 0.5rem 1rem;
+}

@@ -1,0 +1,29 @@
+<div class="content">
+
+    <app-navbar-user></app-navbar-user>
+
+    <div class="reservation-data">
+        <div class="reservation-container">
+            <h1 class="text-center orange mb-3 mt-5">Choose your dream car</h1>
+            <div class="car-item d-flex" *ngFor="let item of cars">
+                <div class="d-flex">
+                    <div>
+                        <img [src]="item.image" width="128" height="128" /> 
+                     </div>
+         
+                     <div class="ms-3">
+                         <b>{{item.brand}} {{item.model}}</b>
+                         <div>Year: {{item.year}}</div>
+                         <div>Color: {{item.color}}</div>
+                         <div>Seat count: {{item.seatCount}}</div>
+                         <div>Price: <b>{{item.pricePerDay}} E</b></div>
+                     </div>
+                </div>
+    
+                <div class="reservation">
+                    <app-btn text="Make a reservation" (click)="makeReservation(item)"></app-btn>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
